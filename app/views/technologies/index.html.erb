@@ -1,0 +1,64 @@
+<div class="contents row" >
+  <% if current_user.group_id == 1 || current_user.group_id == 2 || current_user.group_id == 1 || current_user.group_id == 4 %>
+    <% @technologies.each do |technology| %>
+      <div class="content_post">
+         <h2>技術名称：<%= technology.product %></h2>
+        <% if user_signed_in? && current_user.id == technology.user_id %>
+            <div class="button">
+              <%= link_to '編集', "/technologies/#{technology.id}/edit", method: :get %>
+            </div>
+            <div class="button">
+            <%= link_to '削除', "technologies/#{technology.id}", method: :delete %>
+            </div>
+        <% end %>
+          <!--<%=simple_format(technology.product) %>-->
+         
+          <h3>技術内容</h3>
+          <h4><%= technology.summary %></h4>
+          <h3>特徴</h3>
+          <h4><%= technology.feature %></h4>
+          <h3>考慮点</h3>
+          <h4><%= technology.consideration %></h4>
+          <h3>URL</h3>
+          <h4><%= link_to technology.url, technology.url, :target=>["_blank"] %></h4>
+          <h3>Drive資料</h3>
+          <h4><%= link_to technology.drive, technology.drive, :target=>["_blank"] %></h4>
+          <h3>担当</h3>
+          <h4><%= technology.user.name %></h4>
+          <h4></h4>
+      </div>
+    <% end %>
+     <%= paginate(@technologies) %>
+  <% else %>
+      <% @technologies_group.each do |technology| %>
+      <div class="content_post">
+         <h2>技術名称：<%= technology.product %></h2>
+           <% if user_signed_in? && current_user.id == technology.user_id %>
+            <div class="edit">
+              <%= link_to '編集', "/technologies/#{technology.id}/edit", method: :get %>
+            </div>
+            <div class="edit">
+            <%= link_to '削除', "technologies/#{technology.id}", method: :delete %>
+            </div>
+          <% end %>
+             <!--<%=simple_format(technology.product) %>-->
+         
+          <h3>技術内容</h3>
+          <h4><%= technology.summary %></h4>
+          <h3>特徴</h3>
+          <h4><%= technology.feature %></h4>
+          <h3>考慮点</h3>
+          <h4><%= technology.consideration %></h4>
+          <h3>URL</h3>
+          <h4><%= link_to technology.url, technology.url, :target=>["_blank"] %></h4>
+          <h3>Drive資料</h3>
+          <h4><%= link_to technology.drive, technology.drive, :target=>["_blank"] %></h4>
+          <h3>担当</h3>
+          <h4><%= technology.user.name %></h4>
+          <h3></h3>
+      </div>
+        
+      <% end %>
+  <% end %>
+  <%= paginate(@technologies) %>
+</div>

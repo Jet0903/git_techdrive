@@ -1,0 +1,285 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Unica+One);
+@font-face {
+  font-family: 'ほのか明朝';
+  src: url("font_1_honokamin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+body, html {
+  height: 100%;
+  background-color: #f5f5f3; }
+
+body {
+  padding-top: 60px; }
+
+h1, h2, h3, h4, h5, h6, p, body {
+  line-height: 1.57;
+  letter-spacing: 0.15em;
+  font-size: 16px;
+  color: #666;
+  font-family: "メイリオ",'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo,  "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: #666; }
+  a:hover {
+    color: #57C3E9; }
+
+.bold {
+  font-weight: bold; }
+
+.serif {
+  font-family: 'ほのか明朝',serif; }
+
+.ultra {
+  font-size: 2em !important; }
+
+::selection {
+  background: #D8D8D8; }
+
+.btn, header.header div.header__bar.row div.grid-6 a.post {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid #57C3E9;
+  color: #57C3E9;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block; }
+  .btn:hover, header.header div.header__bar.row div.grid-6 a.post:hover {
+    border-color: #9bdbf2;
+    color: #9bdbf2; }
+
+h2 {
+  postion: relative;
+  padding: 20px 10px 10px 10px;
+  font: bold large/100% "メイリオ";
+  font-size: 18px;
+  background-color: #E6E6FA; }
+
+h3 {
+  padding: 3px 0 0 20px;
+  font-family: "游ゴシック", "YuGothic";
+  font-size: 15px; }
+
+h4 {
+  padding: 5px 10px 0px 20px;
+  margin: 5px 10px 0px 10px;
+  font-size: 14px;
+  border: 1px solid #D8D8D8;
+  width: 650px;
+  min-height: 20px;
+  border-radius: 3px;
+  font-family: "游ゴシック", "YuGothic"; }
+
+p {
+  FONT: "メイリオ";
+  font: bold large/100% "メイリオ";
+  font-size: 16px;
+  text-align: center; }
+
+.title {
+  font-weight: bold; }
+
+.title--big {
+  font-size: 1.5em;
+  font-weight: bold; }
+  .title--big i {
+    font-style: italic;
+    font-size: 1.8em; }
+
+header.header {
+  padding: 10px;
+  border-bottom: 1px solid #D8D8D8;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5; }
+  header.header div.header__bar.row {
+    position: relative; }
+    header.header div.header__bar.row h1.grid-6 {
+      font-size: 20px;
+      line-height: 41px;
+      float: left; }
+      header.header div.header__bar.row h1.grid-6 a {
+        display: block; }
+    header.header div.header__bar.row div.grid-6 {
+      float: right;
+      text-align: right; }
+      header.header div.header__bar.row div.grid-6 a.post {
+        width: 120px;
+        display: inline-left;
+        margin-right: 10px; }
+  header.header .user_nav {
+    position: relative;
+    height: 100px;
+    position: absolute;
+    right: 0; }
+    header.header .user_nav span {
+      top: 5px;
+      display: block;
+      float: left;
+      margin-right: 10px;
+      width: 150px;
+      height: 150px;
+      font-size: 1em;
+      cursor: pointer;
+      position: relative; }
+      header.header .user_nav span:after {
+        content: '▼';
+        font-size: .7em;
+        margin-left: -4px; }
+      header.header .user_nav span:hover ul {
+        color: #57C3E9;
+        display: block; }
+      header.header .user_nav span ul {
+        text-align: center;
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        border-left: 1px solid #d8d8d8;
+        border-right: 1px solid #d8d8d8;
+        background-color: #fff;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1); }
+        header.header .user_nav span ul li {
+          bakcground-color: #f0f0f0;
+          list-style: none; }
+          header.header .user_nav span ul li a {
+            display: block;
+            padding: 10px 0px;
+            text-align: left;
+            border-bottom: 1px solid #d8d8d8; }
+
+div.contents.row {
+  margin: 20px 0;
+  padding: 30px;
+  margin: 0 auto;
+  width: 700px; }
+
+div.content_post {
+  width: 700px;
+  margin: 20px auto;
+  postion: relative;
+  min-height: 400px;
+  color: #292929;
+  background-color: #fff;
+  background-position: center center;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2); }
+
+.item {
+  padding: 10px 0 0 0;
+  font-family: "メイリオ";
+  font-size: 16px;
+  list-style: none;
+  font-weight: bold; }
+  .item:hover {
+    background-color: #57C3E9;
+    color: #fff; }
+
+.delete {
+  padding: 10px 0 0 0;
+  width: 40px;
+  height: 30px;
+  padding: 0 auto;
+  margin: 0 px  0;
+  font-size: 16px;
+  list-style: none;
+  font-weight: bold;
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+  font-family: "游ゴシック", "YuGothic"; }
+
+.edit{
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 16px;
+  padding: 6px;
+  margin: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #fff;
+  border: 2px solid #57C3E9;
+  text-decoration: none;
+  text-align: center;
+  font: bold large/100% "メイリオ";
+  font-size: 1.0rem;
+  left: 540px;
+  vertical-align: middle;
+}
+
+.register {
+  width: 700px;
+  margin: 0 auto;
+  font-family: "游ゴシック", "YuGothic";
+  
+  }
+
+form {
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: white;
+  box-sizing: border-box;
+  font-family: "游ゴシック", "YuGothic";
+  }
+  form h3 {
+    margin: 0 0 20px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    color: #666; }
+  form input, form textarea {
+    width: 100%;
+    margin: 5px 0 15px;
+    padding: 10px;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    font-family: "游ゴシック", "YuGothic"; }
+  form input[type="submit"] {
+    background-color: #57C3E9;
+    border-radius: 20px;
+    color: #fff;
+    border: 0;
+    font-size: 18px; }
+    form input[type="submit"]:hover {
+      background-color: #84d3ef; }
+
+.contents_create {
+  width: 700px;
+  margin: 30px auto; }
+
+.success {
+  text-align: center; }
+
+.pagination {
+  width: 700px;
+  margin: 0px auto 30px;
+  text-align: center;
+  font-family: "游ゴシック", "YuGothic"; }
+
+.login {
+  width: 700px;
+  margin: 0px auto 30px;
+  text-align: center;
+  font-family: "游ゴシック", "YuGothic";
+  background-color: #fff; }
+
+.login_title {
+  width: 500;
+  magin: 0px auto 30px;
+  padding: 0 0 30px 0;
+  text-align: center;
+  font-family: "游ゴシック", "YuGothic";
+  background-color: #fff; }
+
+.field {
+  text-align: left;
+  padding: 0 0 10px 0px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,17 @@
+<div class="register">
+  <%= form_tag("/technologies/#{@technology.id}", method: :patch ) do %>
+    <h3>
+      編集する
+    </h3>
+    <input type="text" name="product" value="<%= @technology.product %>" placeholder="技術名称">
+    <textarea type="text" name="summary" placeholder="概要" rows="10" cols="30"><%= @technology.summary %></textarea>
+    <textarea type="text" name="detail" placeholder="エンジニア向け詳細情報" rows="10" cols="30"><%= @technology.detail %></textarea>
+    <textarea type="text" name="feature" placeholder="特徴" rows="10" cols="30"><%= @technology.feature %></textarea>
+    <textarea type="text" name="consideration" placeholder="考慮点" rows="10" cols="30"><%= @technology.consideration %></textarea>
+    <textarea type="text" name="usecase" placeholder="ANAにおけるユースケース" rows="10" cols="30"><%= @technology.usecase %></textarea>
+    <input type="text" name="url" value="<%= @technology.url %>" placeholder="参考URL">
+    <input type="text" name="drive" value="<%= @technology.drive %>" placeholder="資料保管場所(Google Drive)のURL">
+    <textarea name="note" placeholder="備考" rows="10" cols="30"><%= @technology.note %></textarea>
+    <input type="submit" value="SENT">
+  <% end %>
+</div>

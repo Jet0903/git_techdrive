@@ -1,0 +1,17 @@
+<div class="register">
+  <%= form_tag('/technologies', method: :post) do %>
+    <h3>
+      登録する
+    </h3>
+    <input type="text" name="product" placeholder="技術名称">
+    <textarea type="text" name="summary" placeholder="概要" rows="10" cols="30"></textarea>
+    <textarea type="text" name="detail" placeholder="エンジニア向け詳細情報" rows="10" cols="30"></textarea>
+    <textarea type="text" name="feature" placeholder="特徴" rows="10" cols="30"></textarea>
+    <textarea type="text" name="consideration" placeholder="考慮点" rows="10" cols="30"></textarea>
+    <textarea type="text" name="usecase" placeholder="ANAにおけるユースケース" rows="10" cols="30"></textarea>
+    <input type="text" name="url" placeholder="参考URL">
+    <input type="text" name="drive" placeholder="資料保管場所(Google Drive)のURL">
+    <textarea name="note" placeholder="備考" rows="10" cols="30"></textarea>
+    <input type="submit" value="SENT">
+  <% end %>
+</div>

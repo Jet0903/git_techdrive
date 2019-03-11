@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tech::drive</title>
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tag %>
+     <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Unica+One::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <% if user_signed_in? %>
+      <header class="header">
+        <div class="header__bar row">
+          <h1 class="grid-6"><a href="/">Tech::Drive</a></h1>
+          <div class="user_nav grid-6">
+            <span><%= current_user.name %>
+              <ul class="user__info">
+                <li>
+                  <a href="/users/<%= current_user.id %>">マイページ</a>
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                </li>
+              </ul>
+            </span>
+            
+            <a class="post" href="/technologies/new">投稿する</a>
+          </div>
+        </div>
+      </header>
+    <% else %>
+    <% end %>
+    <%= yield %>
+    
+     <footer>
+      <p>
+        Copyright D-Tec 2019.
+      </p>
+    </footer>
+  </body>
+</html>
